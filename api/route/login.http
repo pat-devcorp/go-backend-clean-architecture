@@ -1,0 +1,15 @@
+@base_url = http://localhost:8080
+@email = test@gmail.com
+@password = test
+
+### Login
+# @name tokenAPI
+POST {{base_url}}/login?email={{email}}&password={{password}}
+
+### Get my user profile
+GET {{base_url}}/profile
+Authorization: Bearer {{tokenAPI.response.body.accessToken}}
+
+### Refresh Tocken
+POST {{base_url}}/refresh?refreshToken={{tokenAPI.response.body.refreshToken}}
+Content-Type: application/x-www-form-urlencoded

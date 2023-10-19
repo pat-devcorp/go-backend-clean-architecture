@@ -1,0 +1,7 @@
+@base_url = http://localhost:8080
+@email = patrick18483@gmail.com
+@password = test
+@name = Patrick Fuentes Carpio
+
+### Sing Up
+POST {{base_url}}/signup?email={{email}}&password={{password}}&name={{name}}
